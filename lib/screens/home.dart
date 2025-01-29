@@ -2,6 +2,7 @@
 
 import 'package:dbproject/custom_widgets/department_widget.dart';
 import 'package:dbproject/screens/find.dart';
+import 'package:dbproject/screens/lostlocate.dart';
 import 'package:dbproject/screens/report.dart';
 import 'package:dbproject/screens/sign_up.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class Home extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Find()),
+                          MaterialPageRoute(builder: (context) => Lostlocate()),
                         );
                       },
                       icon: Icon(Icons.search)),

@@ -1,5 +1,6 @@
 import 'package:dbproject/screens/home.dart';
 import 'package:dbproject/screens/login.dart';
+import 'package:dbproject/screens/lostlocate.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,6 +21,6 @@ class MyApp extends StatelessWidget {
               seedColor: const Color.fromARGB(255, 255, 255, 255)),
           useMaterial3: false,
         ),
-        home: const Home());
+        home: Home());
   }
 }
