@@ -56,7 +56,7 @@ class _ReportPageState extends State<ReportPage> {
           child: Column(
             children: [
               Container(
-                height: 300,
+                height: 200,
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: Colors.grey[300],

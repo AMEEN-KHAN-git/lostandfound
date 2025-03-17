@@ -153,42 +153,13 @@ class _LostlocateState extends State<Lostlocate> {
                       imageUrl: items[itemIndex]['image']!,
                       itemName: items[itemIndex]['name']!,
                       description: items[itemIndex]['description']!,
-                      placeFound: departments[itemIndex % departments.length]
-                          ['name'],
+                      placeFound: departments[itemIndex % departments.length]['name'],
                       timeFound: '${itemIndex + 1} hours ago',
                       index: itemIndex,
                     );
                   }),
                 );
               },
-            ),
-          ),
-          Divider(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Logo', style: TextStyle(fontWeight: FontWeight.bold)),
-                Row(
-                  children: [
-                    Text('© 2024 Your Website. All rights reserved.'),
-                    SizedBox(width: 16),
-                    Text('Privacy Policy'),
-                    SizedBox(width: 16),
-                    Text('Terms of Service'),
-                  ],
-                ),
-                Row(
-                  children: [
-                    Icon(Icons.facebook),
-                    SizedBox(width: 8),
-                    Icon(Icons.message),
-                    SizedBox(width: 8),
-                    Icon(Icons.call),
-                  ],
-                ),
-              ],
             ),
           ),
         ],
@@ -204,36 +175,15 @@ class _LostlocateState extends State<Lostlocate> {
     required String timeFound,
     required int index,
   }) {
-    bool isHovered = hoveredIndex == index;
-
-    return MouseRegion(
-      onEnter: (_) => setState(() => hoveredIndex = index),
-      onExit: (_) => setState(() => hoveredIndex = -1),
-      child: AnimatedContainer(
-        duration: Duration(milliseconds: 200),
-        margin: EdgeInsets.all(8),
-        transform: Matrix4.identity()..scale(isHovered ? 1.05 : 1.0),
-        child: Column(
-          children: [
-            Container(
-              width: 100,
-              height: 100,
-              decoration: BoxDecoration(
-                color: Colors.grey[300],
-                image: DecorationImage(
-                  image: NetworkImage(imageUrl),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            SizedBox(height: 8),
-            Text(itemName, style: TextStyle(fontWeight: FontWeight.bold)),
-            SizedBox(height: 4),
-            Text(description),
-            Text(placeFound),
-            Text(timeFound),
-          ],
-        ),
+    return Card(
+      child: Column(
+        children: [
+          Image.network(imageUrl, height: 100, width: 100, fit: BoxFit.cover),
+          Text(itemName),
+          Text(description),
+          Text('Found at: $placeFound'),
+          Text(timeFound),
+        ],
       ),
     );
   }
