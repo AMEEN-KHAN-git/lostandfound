@@ -88,8 +88,8 @@ class Home extends StatelessWidget {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 20, horizontal: 40),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                         backgroundColor: Colors.blueAccent,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
@@ -112,8 +112,8 @@ class Home extends StatelessWidget {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        padding: EdgeInsets.symmetric(
-                            vertical: 20, horizontal: 40),
+                        padding:
+                            EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                         backgroundColor: Colors.greenAccent,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),

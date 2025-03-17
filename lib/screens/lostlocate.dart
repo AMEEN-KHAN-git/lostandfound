@@ -16,15 +16,58 @@ class _LostlocateState extends State<Lostlocate> {
   ];
 
   final List<Map<String, String>> items = [
-    {'name': 'Smartphone', 'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNOSU7L8aKSczWOwZ-yoA3l4WSM_iouCfvA&s', 'description': 'A black smartphone with a sleek design.'},
-    {'name': 'Earphones', 'image': 'https://i.ebayimg.com/images/g/zQcAAOSwYXBlx9Q3/s-l400.jpg', 'description': 'A pair of wireless earbuds in a charging case.'},
-    {'name': 'Notebook', 'image': 'https://www.muji.us/cdn/shop/products/4550182108569_org_1200x1200.jpg?v=1625170566', 'description': 'A spiral-bound notebook with lined pages.'},
-    {'name': 'Water Bottle', 'image': 'https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/wnushvamuaheo4v0ertj', 'description': 'A pink insulated water bottle.'},
-    {'name': 'Umbrella', 'image': 'https://www.shopbentley.com/cdn/shop/files/1026152001_b.jpg?v=1688737133&width=1000', 'description': 'A compact, foldable umbrella.'},
-    {'name': 'Wallet', 'image': 'https://craftandglory.in/cdn/shop/products/85.png?v=1655624729', 'description': 'A brown leather wallet with card slots.'},
-    {'name': 'Keys', 'image': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYwtDwAy2JUVy6pNYsRBWEas1A-7Wz--uHiA&s', 'description': 'A set of house and car keys on a keychain.'},
-    {'name': 'Watch', 'image': 'https://cdn.shopify.com/s/files/1/0213/7833/4784/files/Hamilton_2897_Photo_1024x1024.png?v=1620719334', 'description': 'A classic wristwatch with a leather strap.'},
-    {'name': 'Calculator', 'image': 'https://c02.purpledshub.com/uploads/sites/41/2023/01/Untitled-design-1-148f985.jpg?webp=1&w=1200', 'description': 'A scientific calculator with advanced functions.'},
+    {
+      'name': 'Smartphone',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNOSU7L8aKSczWOwZ-yoA3l4WSM_iouCfvA&s',
+      'description': 'A black smartphone with a sleek design.'
+    },
+    {
+      'name': 'Earphones',
+      'image': 'https://i.ebayimg.com/images/g/zQcAAOSwYXBlx9Q3/s-l400.jpg',
+      'description': 'A pair of wireless earbuds in a charging case.'
+    },
+    {
+      'name': 'Notebook',
+      'image':
+          'https://www.muji.us/cdn/shop/products/4550182108569_org_1200x1200.jpg?v=1625170566',
+      'description': 'A spiral-bound notebook with lined pages.'
+    },
+    {
+      'name': 'Water Bottle',
+      'image':
+          'https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/wnushvamuaheo4v0ertj',
+      'description': 'A pink insulated water bottle.'
+    },
+    {
+      'name': 'Umbrella',
+      'image':
+          'https://www.shopbentley.com/cdn/shop/files/1026152001_b.jpg?v=1688737133&width=1000',
+      'description': 'A compact, foldable umbrella.'
+    },
+    {
+      'name': 'Wallet',
+      'image': 'https://craftandglory.in/cdn/shop/products/85.png?v=1655624729',
+      'description': 'A brown leather wallet with card slots.'
+    },
+    {
+      'name': 'Keys',
+      'image':
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYwtDwAy2JUVy6pNYsRBWEas1A-7Wz--uHiA&s',
+      'description': 'A set of house and car keys on a keychain.'
+    },
+    {
+      'name': 'Watch',
+      'image':
+          'https://cdn.shopify.com/s/files/1/0213/7833/4784/files/Hamilton_2897_Photo_1024x1024.png?v=1620719334',
+      'description': 'A classic wristwatch with a leather strap.'
+    },
+    {
+      'name': 'Calculator',
+      'image':
+          'https://c02.purpledshub.com/uploads/sites/41/2023/01/Untitled-design-1-148f985.jpg?webp=1&w=1200',
+      'description': 'A scientific calculator with advanced functions.'
+    },
   ];
 
   int activeDepartmentIndex = 0;
@@ -110,7 +153,8 @@ class _LostlocateState extends State<Lostlocate> {
                       imageUrl: items[itemIndex]['image']!,
                       itemName: items[itemIndex]['name']!,
                       description: items[itemIndex]['description']!,
-                      placeFound: departments[itemIndex % departments.length]['name'],
+                      placeFound: departments[itemIndex % departments.length]
+                          ['name'],
                       timeFound: '${itemIndex + 1} hours ago',
                       index: itemIndex,
                     );
